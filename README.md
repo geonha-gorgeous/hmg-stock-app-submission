@@ -30,6 +30,11 @@ Android는 [서명된 release APK](apk/개인_주식_release.apk)를 설치하�
 
 증권사 연결은 브라우저에서 별도 설정합니다. 실제 키를 사용한 인증·조회·주문은 아직 검증하지 않았습니다. 차량 상태는 시뮬레이션이며 Pleos SDK·실차 연결도 남아 있습니다.
 
+## 제출 장표
+
+- [기획서 PDF · 14쪽](submission/HMG-stock-app-submission.pdf)
+- [기획서 HTML](submission/HMG-stock-app-submission.html): 내려받아 브라우저에서 엽니다.
+
 ## 살펴보기
 
 | 자료 | 내용 |
@@ -38,6 +43,7 @@ Android는 [서명된 release APK](apk/개인_주식_release.apk)를 설치하�
 | [구조와 API 대응](docs/architecture.md) | 브라우저·서버·Android 구성과 Pleos 연결 범위 |
 | [증권사 설정](prototype/BROKER-INTEGRATION.md) | 모의투자 키 설정, 주문 상태, HTTP 경로 |
 | [검증 결과](docs/validation.md) | 자동 테스트·빌드와 브라우저·에뮬레이터 확인 범위 |
-| [APK 정보](artifacts/README.md) | 설치 명령, 빌드 환경, 파일 해시 |
+| [Release APK 정보](apk/README.md) | 설치 명령, 서명과 파일 해시 |
+| [개발용 debug APK](artifacts/README.md) | 개발 환경의 설치·디버깅용 APK |
 
-2026-11-15 기준 앱 테스트 118개, Android 검증 도구 테스트 9개와 웹·debug·release 빌드와 release 서명·설치를 확인했습니다. 이 저장소는 개발 중간 결과물이며 공모전 접수·실차 검증·release APK 제출 완료를 뜻하지 않습니다.
+2026-11-15 기준 앱 테스트 118개와 Android 검증 도구 테스트 9개가 통과했습니다. 웹·debug·release 빌드, release 서명·설치도 확인했습니다. 공모전 접수와 실차 검증은 아직 완료하지 않았습니다.
