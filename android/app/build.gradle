@@ -1,0 +1,34 @@
+plugins { id 'com.android.application' }
+
+android {
+    namespace 'tech.donda.pleos'
+    compileSdk 36
+    defaultConfig {
+        applicationId 'tech.donda.pleos'
+        minSdk 28
+        targetSdk 36
+        versionCode 1
+        versionName '0.1.0'
+    }
+    buildTypes {
+        debug { applicationIdSuffix '.debug' }
+        release { minifyEnabled false }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+    buildFeatures { buildConfig true }
+}
+
+// The web build must succeed before replacing the APK's bundled UI.
+tasks.register('syncWebAssets', Sync) {
+    from rootProject.file('../prototype/dist')
+    into layout.projectDirectory.dir('src/main/assets/web')
+    doFirst {
+        if (!rootProject.file('../prototype/dist/index.html').isFile()) {
+            throw new GradleException('Run npm run build in prototype/ before assembling the APK.')
+        }
+    }
+}
+tasks.named('preBuild').configure { dependsOn 'syncWebAssets' }

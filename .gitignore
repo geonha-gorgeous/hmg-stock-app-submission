@@ -1,0 +1,12 @@
+# Local OS and editor files
+.DS_Store
+*.swp
+*.tmp
+# Credentials and signing material
+.env*
+!.env.example
+*.keystore
+*.jks
+# Local worktrees and writing scratch
+.codex-worktrees/
+_workspace/

@@ -1,0 +1,125 @@
+/* Container rules also cover the prototype's split-screen toggle. */
+@container (max-width:1120px) {
+  main { padding:24px; }
+  .watch-layout { grid-template-columns:minmax(0,1.25fr) minmax(320px,1fr); gap:20px; }
+  .quote-card { padding:22px; }
+  .stock-row { padding:16px 14px 16px 11px; gap:12px; }
+  .stock-row-name { font-size:23px; }
+  .stock-row-price { font-size:24px; }
+  .app-dock { padding:10px 24px; gap:16px; }
+  .nav-items button { min-width:140px; padding:16px 22px; }
+  .glance-brief { flex-direction:column; align-items:flex-start; gap:14px; }
+  .glance-brief .listen-button { width:100%; }
+}
+@container (max-width:820px) {
+  .heading-meta { gap:12px; }
+  .snapshot-label { max-width:180px; font-size:14px; }
+  .watch-layout { grid-template-columns:1fr; }
+  .watchlist { display:flex; }
+  .stock-row { min-height:100px; }
+  .market-strip { gap:20px; flex-wrap:wrap; }
+  .market-caption { display:none; }
+  .quote-card { padding:24px; }
+  .quote-number { font-size:72px; }
+  .stock-chart { height:150px; }
+  .app-dock { gap:8px; padding:10px 16px; }
+  .nav-items { flex:1; gap:8px; }
+  .nav-bottom button { flex-direction:column; gap:7px; font-size:16px; padding:12px 8px; }
+  .nav-items button { flex:1; min-width:76px; padding:14px 12px; font-size:20px; }
+  .nav-items i { position:absolute; right:5px; top:5px; font-size:12px; }
+  .briefing-page { grid-template-columns:1fr; }
+  .briefing-main { min-height:430px; }
+  .compact .quote-card { min-height:480px; }
+  .glance-brief { flex-direction:row; align-items:center; }
+  .glance-brief .listen-button { width:auto; }
+}
+@container (max-width:520px) {
+  main { padding:20px 16px 12px; }
+  .system-bar { padding:0 16px; }
+  .vehicle-status,.system-right { gap:10px; font-size:16px; }
+  .vehicle-status>span:last-child { display:none; }
+  .system-divider,.system-right>svg { display:none; }
+  .system-right button { width:56px; min-width:56px; }
+  .page-heading { gap:12px; }
+  h1 { font-size:30px; }
+  .heading-meta { flex-direction:column-reverse; gap:8px; align-items:flex-end; }
+  .snapshot-label { font-size:12px; }
+  .snapshot-label svg { display:none; }
+  .market-strip { font-size:16px; gap:10px 20px; }
+  .market-strip>div { gap:8px; }
+  .quote-card { padding:20px; }
+  .stock-title { gap:10px; }
+  .stock-title h2 { font-size:26px; }
+  .quote-number,.compact .quote-number { font-size:60px; letter-spacing:-2px; }
+  .quote-change,.compact .quote-change { font-size:22px; }
+  .quote-change .subtle { margin-left:0; }
+  .chart-footer { flex-wrap:wrap; }
+  .holding-line { flex-wrap:wrap; }
+  .holding-line .subtle { display:block; margin-top:6px; }
+  .app-dock { padding:8px; }
+  .nav-items button { flex-direction:column; gap:7px; font-size:16px; padding:12px 7px; }
+  .nav-bottom button { min-width:76px; width:76px; }
+  .nav-bottom button { flex-direction:column; gap:7px; font-size:16px; padding:12px 8px; }
+  .glance-brief { flex-direction:column; align-items:flex-start; }
+  .glance-brief .listen-button { width:100%; }
+  .briefing-main { padding:28px 20px; }
+  .briefing-main h2 { font-size:34px; }
+  .brief-summary { padding:0; }
+  .summary-item { gap:16px; }
+  .summary-item p { font-size:24px; }
+  .account-summary { flex-direction:column; gap:16px; padding:20px; }
+  .account-summary strong { display:block; margin:8px 0 0; font-size:28px; }
+  .order-row { flex-wrap:wrap; gap:16px; padding:20px; }
+  .order-direction { display:none; }
+  .order-row strong { font-size:24px; }
+  .order-row p { font-size:18px; }
+  .order-status { margin-left:0; }
+  .order-row>svg { margin-left:auto; }
+}
+@media (max-width:800px) {
+  .prototype-page { padding:12px; }
+  .review-bar { align-items:flex-start; gap:12px; }
+  .review-controls { gap:4px; }
+  .review-controls button>span { display:none; }
+  .demo-badge { flex-basis:100%; font-size:12px; justify-content:flex-end; }
+}
+@media (max-width:600px) {
+  .modal { padding:24px; width:calc(100% - 24px); max-height:calc(100dvh - 24px); }
+  .modal-header h2 { font-size:28px; }
+  .modal-header { margin-bottom:20px; }
+  .order-price { margin:22px 0; }
+  .order-price strong,.order-total strong { font-size:28px; }
+  .quantity-control input { max-width:90px; font-size:32px; }
+  .result-actions { grid-template-columns:1fr; }
+  .scenario-buttons { grid-template-columns:1fr 1fr; }
+  .voice-examples button { font-size:20px; padding:18px; }
+  .toast { font-size:16px; padding:12px 16px; gap:12px; }
+}
+@media (prefers-reduced-motion:reduce) { * { transition:none!important; scroll-behavior:auto!important; } }
+@container (max-width:1120px) {
+  .compact .quote-number { font-size:62px; }
+  .compact .quote-change { font-size:21px; }
+  .compact .glance-brief .listen-button { min-width:128px; font-size:17px; }
+}
+@container (max-width:820px) {
+  .compact .quote-card { min-height:400px; }
+  .compact .quote-number { font-size:72px; }
+  .compact .stock-row { min-height:88px; }
+}
+@container (max-width:520px) {
+  .compact .quote-card { display:flex; min-height:0; }
+  .compact .quote-number { font-size:60px; }
+  .compact .glance-brief { padding:20px 0; width:100%; }
+  .compact .glance-brief .listen-button { width:100%; font-size:20px; }
+}
+@media (max-height:850px) and (min-width:1000px) {
+  .prototype-page { padding-top:10px; }
+  .review-bar { margin-bottom:8px; }
+  .compact .quote-card { min-height:426px; }
+  .compact .quote-number { font-size:64px; }
+}
+@container (min-width:821px) and (max-width:1120px) {
+  .compact .quote-number { font-size:54px; white-space:nowrap; }
+  .compact .stock-title { gap:10px; }
+  .compact .stock-title h2 { font-size:26px; }
+}

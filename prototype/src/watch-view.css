@@ -1,0 +1,108 @@
+.watch-view { --watch-background:#e8edf2; --watch-muted:#607084; --watch-selected:#dce6f2; --watch-buy:#b43d36; --watch-buy-surface:#faece9; --watch-sell:#265eb9; --watch-sell-surface:#e8effb; display:flex; flex:1; flex-direction:column; min-height:0; min-width:0; gap:12px; container-type:inline-size; }
+:root[data-theme='dark'] .watch-view { --watch-background:#1c2530; --watch-muted:#a1afc0; --watch-selected:#2a3b50; --watch-buy:#ffa59c; --watch-buy-surface:#432b2e; --watch-sell:#a6c6ff; --watch-sell-surface:#253a58; }
+.watch-view .watch-content { display:grid; grid-template-columns:minmax(0,1.28fr) minmax(288px,1fr); gap:20px; flex:1; min-height:0; min-width:0; }
+.watch-view .watch-focus-card { background:var(--surface); border:1px solid var(--line); border-radius:18px; padding:22px 24px 20px; min-width:0; min-height:0; display:flex; flex-direction:column; box-shadow:0 5px 18px #12263e06; }
+.watch-view .watch-stock-heading { display:flex; justify-content:space-between; align-items:center; gap:12px; flex-shrink:0; }
+.watch-view .watch-section-label { color:var(--watch-muted); font-size:13px; font-weight:500; }
+.watch-view .watch-stock-heading h1 { color:var(--text); font-size:30px; line-height:1.18; letter-spacing:-.8px; margin:5px 0 4px; }
+.watch-view .watch-symbol { display:block; color:var(--watch-muted); font-size:13px; }
+.watch-view .watch-alert { display:grid; place-items:center; width:56px; height:56px; border-radius:12px; color:var(--watch-muted); flex-shrink:0; }
+.watch-view .watch-alert.is-enabled { color:var(--primary); background:var(--primary-soft); }
+.watch-view .watch-price-block { padding-top:18px; flex-shrink:0; }
+.watch-view .watch-main-price { font-size:clamp(48px,5.4cqw,72px); line-height:1.05; letter-spacing:-2.5px; font-variant-numeric:tabular-nums; font-weight:600; white-space:nowrap; }
+.watch-view .watch-main-price>span { font-size:23px; font-weight:450; margin-left:8px; letter-spacing:0; }
+.watch-view .watch-main-change { display:flex; align-items:center; gap:5px; font-size:23px; font-variant-numeric:tabular-nums; font-weight:550; margin-top:10px; flex-wrap:wrap; }
+.watch-view .watch-change-label { color:var(--watch-muted); font-size:12px; font-weight:400; margin-left:5px; }
+.watch-view .watch-asof { display:flex; align-items:flex-start; gap:5px; color:var(--watch-muted); font-size:12px; line-height:1.4; margin-top:8px; overflow-wrap:anywhere; }
+.watch-view .watch-asof svg { margin-top:1px; }
+.watch-view .watch-asof.is-stale { color:var(--rise); }
+.watch-view .watch-analysis-space { flex:1; min-height:0; display:flex; flex-direction:column; padding-top:3px; justify-content:center; }
+.watch-view .watch-chart { flex:1; min-height:96px; max-height:150px; }
+.watch-view .stock-chart { margin:0; height:100%; min-height:96px; }
+.watch-view .watch-periods { display:flex; gap:6px; flex-shrink:0; }
+.watch-view .watch-periods button { min-width:66px; min-height:42px; font-size:15px; color:var(--watch-muted); border-radius:8px; }
+.watch-view .watch-periods .is-selected { color:var(--text); background:var(--hover); font-weight:650; }
+.watch-view .watch-no-chart { font-size:14px; color:var(--watch-muted); padding:12px 0; }
+.watch-view .watch-card-bottom { flex-shrink:0; margin-top:10px; display:grid; grid-template-columns:minmax(136px,1.15fr) minmax(0,1.6fr); gap:10px; }
+.watch-view .watch-holding { grid-column:1/-1; display:flex; justify-content:space-between; align-items:center; gap:12px; min-height:41px; border-top:1px solid var(--line); font-size:16px; color:var(--watch-muted); }
+.watch-view .watch-holding>span:last-child { display:flex; align-items:baseline; gap:10px; }
+.watch-view .watch-holding strong { font-weight:550; color:var(--text); }
+.watch-view .watch-holding-value { font-size:13px; }
+.watch-view .watch-stock-brief .listen-button { width:100%; min-width:0; min-height:76px; height:100%; margin:0; padding:12px 16px; font-size:18px; border-radius:10px; background:#1e50b5; color:#fff; }
+.watch-view .watch-stock-brief .listen-button:hover:not(:disabled) { background:#183f90; }
+.watch-view .watch-stock-brief .listen-button svg { width:21px; height:21px; }
+.watch-view .watch-trade-actions { display:grid; grid-template-columns:1fr 1fr; gap:10px; }
+.watch-view .watch-trade-actions button { display:flex; align-items:center; justify-content:space-between; min-height:76px; padding:15px 16px; font-size:22px; font-weight:650; border-radius:10px; }
+.watch-view .watch-buy { color:var(--watch-buy); background:var(--watch-buy-surface); }
+.watch-view .watch-sell { color:var(--watch-sell); background:var(--watch-sell-surface); }
+.watch-view .watch-side { min-height:0; min-width:0; background:var(--watch-background); border-radius:18px; padding:18px 14px 12px; display:flex; flex-direction:column; }
+.watch-view .watch-list-heading { display:flex; align-items:center; gap:8px; padding:0 6px 12px; color:var(--watch-muted); flex-shrink:0; }
+.watch-view .watch-list-heading h2 { font-size:18px; font-weight:550; }
+.watch-view .watch-list-heading>span { font-size:14px; }
+.watch-view .watch-stocks { display:grid; grid-template-rows:repeat(4,minmax(72px,1fr)); flex:1; min-height:0; gap:4px; align-content:start; }
+.watch-view .watch-stock-row { display:flex; align-items:center; gap:7px; min-width:0; min-height:72px; padding:12px 10px; border-radius:11px; border:1px solid transparent; text-align:left; }
+.watch-view .watch-stock-row.is-selected { background:var(--watch-selected); border-color:color-mix(in srgb,var(--primary) 26%,transparent); }
+.watch-view .watch-row-selection { width:19px; flex-shrink:0; color:var(--primary); display:flex; }
+.watch-view .watch-row-name { font-size:21px; font-weight:550; white-space:nowrap; }
+.watch-view .watch-row-name small { display:block; font-size:12px; font-weight:400; margin-top:6px; color:var(--watch-muted); }
+.watch-view .watch-row-price { margin-left:auto; text-align:right; font-size:23px; font-weight:550; white-space:nowrap; font-variant-numeric:tabular-nums; }
+.watch-view .watch-row-price small { display:flex; align-items:center; justify-content:flex-end; gap:1px; font-size:16px; font-weight:500; margin-top:5px; }
+.watch-view .watch-flat { color:var(--watch-muted); }
+.watch-view .watch-market-brief { min-height:72px; display:flex; align-items:center; gap:10px; text-align:left; padding:12px; margin-top:10px; border-top:1px solid color-mix(in srgb,var(--watch-muted) 20%,transparent); border-radius:0; font-size:17px; flex-shrink:0; }
+.watch-view .watch-market-brief>svg:last-child { margin-left:auto; color:var(--watch-muted); }
+.watch-view .watch-market-footer { display:flex; align-items:center; gap:24px; padding:0 4px; font-size:12px; line-height:1.5; color:var(--watch-muted); flex-shrink:0; }
+.watch-view .watch-market-footer>span { display:flex; align-items:center; gap:7px; }
+.watch-view .watch-market-footer strong { font-weight:500; color:var(--watch-muted); font-variant-numeric:tabular-nums; }
+.watch-view .watch-market-footer>span>span { display:flex; align-items:center; gap:1px; }
+.watch-view .watch-empty { background:var(--surface); flex:1; min-height:280px; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:22px; border-radius:18px; color:var(--watch-muted); }
+.watch-view .watch-empty h1 { font-size:28px; margin:0; color:var(--text); }
+.watch-view .watch-empty .primary { min-height:64px; font-size:19px; }
+[data-ccp-active='true'] .watch-view .watch-stock-row[data-ccp-focused='true'] { outline-offset:-4px; }
+.watch-view-compact .watch-analysis-space { min-height:12px; }
+.watch-view-compact .watch-main-price { font-size:clamp(64px,7cqw,88px); }
+.watch-view-compact .watch-main-change { font-size:26px; }
+@container (max-width:900px) {
+  .watch-view .watch-content { grid-template-columns:minmax(0,1.14fr) minmax(282px,1fr); gap:14px; }
+  .watch-view .watch-focus-card { padding:18px; }
+  .watch-view .watch-main-price { font-size:56px; }
+  .watch-view .watch-card-bottom { grid-template-columns:minmax(112px,1.1fr) minmax(0,1.5fr); gap:8px; }
+  .watch-view .watch-stock-brief .listen-button { min-height:76px; padding:10px; font-size:17px; }
+  .watch-view .watch-trade-actions button { min-height:76px; padding:10px; font-size:19px; }
+  .watch-view .watch-trade-actions svg { display:none; }
+  .watch-view .watch-main-change { font-size:20px; }
+  .watch-view .watch-change-label { display:none; }
+  .watch-view .watch-side { padding:16px 8px 10px; }
+  .watch-view .watch-stock-row { padding:10px 7px; gap:5px; }
+  .watch-view .watch-row-name { font-size:19px; }
+  .watch-view .watch-row-price { font-size:21px; }
+}
+@container (max-width:649px) {
+  .watch-view .watch-content { display:flex; flex-direction:column; flex:none; min-height:auto; }
+  .watch-view .watch-focus-card { flex-shrink:0; min-height:480px; }
+  .watch-view .watch-analysis-space { min-height:76px; }
+  .watch-view.watch-view-compact .watch-focus-card { min-height:390px; }
+  .watch-view.watch-view-compact .watch-analysis-space { min-height:12px; }
+  .watch-view .watch-side { flex-shrink:0; }
+  .watch-view .watch-stock-brief .listen-button { padding:8px; gap:6px; font-size:15px; white-space:nowrap; }
+  .watch-view .watch-stock-brief .listen-button svg { width:18px; height:18px; }
+  .watch-view .watch-stocks { grid-template-rows:repeat(4,minmax(76px,auto)); }
+  .watch-view .watch-main-price { font-size:58px; }
+  .watch-view .watch-row-name { font-size:21px; }
+  .watch-view .watch-row-price { font-size:23px; }
+  .watch-view .watch-market-footer { flex-wrap:wrap; gap:4px 18px; padding-bottom:4px; }
+}
+
+@media (max-height:650px) and (min-width:900px) {
+  .watch-view .watch-focus-card { padding:16px 20px; }
+  .watch-view .watch-stock-heading h1 { font-size:26px; }
+  .watch-view .watch-price-block { padding-top:10px; }
+  .watch-view .watch-main-price { font-size:54px; }
+  .watch-view .watch-main-change { margin-top:5px; font-size:20px; }
+  .watch-view .watch-asof { margin-top:4px; }
+  .watch-view .watch-card-bottom { grid-template-columns:minmax(120px,1fr) minmax(0,1.5fr); gap:6px; }
+  .watch-view .watch-holding { min-height:32px; }
+  .watch-view .watch-chart,.watch-view .stock-chart { min-height:72px; }
+  .watch-view .watch-stock-brief .listen-button,.watch-view .watch-trade-actions button { min-height:64px; font-size:17px; padding:10px; }
+  .watch-view .watch-trade-actions svg { display:none; }
+  .watch-view .watch-market-brief { min-height:60px; }
+}
